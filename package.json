@@ -1,0 +1,11 @@
+{
+  "name": "spike-me",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}

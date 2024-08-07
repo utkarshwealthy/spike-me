@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: test-alert
+  labels:
+    prometheus: prometheus
+    role: alert-rules
+spec:
+  groups:
+    - name: test-alerts
+      rules:
+        - alert: TestAlert
+          expr: vector(1)
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "This is a test alert"
+            description: "This alert is to test the alerting setup"
+
